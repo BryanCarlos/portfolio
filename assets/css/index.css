@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    max-width: 80rem;
+    padding: 1rem;
+}
+
+.left-column, .right-column {
+    border: 1px solid #000;
+    padding: 1.5rem;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+}
+
+#nav-list ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#nav-list ul li {
+    list-style: none;
+}
+
+.nav-item a {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #222;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#about-title {
+    font-family: 'Fira Code', monospace;
+    line-height: 1;
+}
+
+#about-name {
+    display: block;
+    font-size: 2.2rem;
+    color: #00412b;
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0, 0, 0, 0.199));
+}
+
+#about-subtitle {
+    margin-top: 1.7rem;
+    font-size: 1.35rem;
+}
+
+#about-paragraph {
+    margin-top: .4rem;
+}
+
+.text-contrast {
+    color: #00412b;
+    font-weight: 600;
+}
+
+.techs {
+    color: #00412b;
+    font-weight: bolder;
+}
+
+#all-tech {
+    margin-top: 1rem;
+}
+
+.tech-icons {
+    margin: .5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: .5rem;
+}
+
+.tech-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tech-info img {
+    width: 50%;
+}
+
+.tech-info label {
+    font-weight: 500;
+}
+
+.project-info img {
+    width: 12rem;
+    height: 15rem;
+    border-radius: .8rem;
+}
+
+.project-info p {
+    margin-top: .8rem;
+    font-size: .9rem;
+}
+
+#social-media {
+    display: flex;
+    justify-content: space-around;
+    margin-top: .5rem; 
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fa-brands {
+    font-size: 2.5rem;
+    color: #222;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    border-left: none;
+    position: relative;
+}
+
+.projects {
+    display: flex;
+    gap: .5rem;
+    box-shadow: .3rem .3rem .8rem rgba(0, 0, 0, .2);
+}
+
+#projetos {
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: none;
+    max-width: 18rem;
+    padding: .8rem;
+    border: 1px solid #222;
+    gap: .5rem;
+    flex: 1;
+}
+
+.project > button {
+    font-size: 1rem;
+    padding: .4rem .8rem;
+    border: 2px solid #00412b;
+    box-shadow: .3rem .2rem 0 rgba(0, 0, 0, .4);
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        box-shadow: none;
+        transform: scale(1.05);
+    }
+}
+
+.project > button a {
+    color: #222;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact {
+    margin-top: 1rem;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.contact-input {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.contact-input input {
+    padding: .15rem;
+}
+
+.contact-input label {
+    position: absolute;
+    left: 1.2rem;
+}
+
+.contact-input input[name="textarea"] {
+    width: 15rem;
+}
+
+button[type="submit"] {
+    background-color: #00412b;
+    width: 12rem;
+    padding: .5rem 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #e6e6e6;
+    border: none;
+    cursor: pointer;
+    box-shadow: .3rem .2rem 0 rgba(0, 0, 0, .4);
+    transition: all .3s;
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .projects {
+        flex-wrap: wrap;
+    }
+
+
+    main {
+        flex-direction: column;
+    }
+
+    .tech-icons {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 670px) {
+    .tech-icons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #about-paragraph {
+        font-size: .9rem;
+    }
+
+}
